@@ -1,0 +1,6 @@
+# Chave de assinatura da extensão - nunca commitar (publicação na Chrome Web Store)
+key.pem
+*.pem
+
+# Saída do scripts/build-release.mjs
+dist/
