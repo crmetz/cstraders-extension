@@ -154,7 +154,11 @@ function steamIdFromToken(token) {
 }
 
 function clearCachedToken() {
-	return chrome.storage.local.remove(["cachedToken", "cachedSteamId", "cachedAt"]);
+	return chrome.storage.local.remove([
+		"cachedToken",
+		"cachedSteamId",
+		"cachedAt",
+	]);
 }
 
 async function fetchTradePage(token, startAfter) {
@@ -171,7 +175,9 @@ async function fetchTradePage(token, startAfter) {
 
 	let res;
 	try {
-		res = await fetch(`${STEAM_API}/IEconService/GetTradeHistory/v1/?${params}`);
+		res = await fetch(
+			`${STEAM_API}/IEconService/GetTradeHistory/v1/?${params}`,
+		);
 	} catch {
 		throw new SyncError("steam-unreachable");
 	}
@@ -287,7 +293,10 @@ async function runSync(options) {
 
 		const { lastFetch } = await chrome.storage.local.get("lastFetch");
 		const elapsed = Date.now() - (lastFetch?.at ?? 0);
-		if (lastFetch?.steamId === session.steamId && elapsed < MIN_FETCH_INTERVAL_MS) {
+		if (
+			lastFetch?.steamId === session.steamId &&
+			elapsed < MIN_FETCH_INTERVAL_MS
+		) {
 			return {
 				ok: true,
 				steamId: session.steamId,
@@ -333,11 +342,16 @@ async function runSync(options) {
 
 			const upload = toUploadPage(session.steamId, page, isNew);
 			if (upload.trades.length > 0) {
-				const result = await callBackend(apiOrigin, linkToken, "/api/steam/extension/trades", {
-					method: "POST",
-					headers: { "Content-Type": "application/json" },
-					body: JSON.stringify(upload),
-				});
+				const result = await callBackend(
+					apiOrigin,
+					linkToken,
+					"/api/steam/extension/trades",
+					{
+						method: "POST",
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify(upload),
+					},
+				);
 				stored += result.stored;
 				sentAny = true;
 			}
@@ -353,7 +367,11 @@ async function runSync(options) {
 			await callBackend(apiOrigin, linkToken, "/api/steam/extension/trades", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ steamId: session.steamId, trades: [], descriptions: [] }),
+				body: JSON.stringify({
+					steamId: session.steamId,
+					trades: [],
+					descriptions: [],
+				}),
 			});
 		}
 

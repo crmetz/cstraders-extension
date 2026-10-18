@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "CsTraders - Steam Sync",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Mantém o histórico de trades da sua conta Steam sincronizado com o CsTraders.",
 	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwGYGXp241T4lgoP1ggjd0alOjQv3EOSZaJWHM9oOchMfXDTL+R1F5cFxvZaBjbJxaaRNdKMhLeG+112aTEHfOJwpdbHaMFfJFBPTysKyLvJmRcD6oastcdNMkkzxTIUYE0xK6S1bHFdrh+a70nO8xW79fQIhBEml/sKz7ognpCmAoNhbQdP++FQZwG86dbJLQ0AoWvCBETnvgZdtvLK+rUXOBLRbCr08dZJoS/ugrC72bXx8XkA4hb9ji2B4dLQY2DvoF5H9LBKm7ktVPucohEWStQyn5G4xZOKMcLZCc6R3eqdvyrxcc12wLAED2JEHilWkOncpTId0s7B0t/IQJwIDAQAB",
 	"icons": {
@@ -17,6 +17,7 @@
 	"host_permissions": [
 		"https://steamcommunity.com/*",
 		"https://api.steampowered.com/*",
+		"https://login.steampowered.com/*",
 		"http://localhost/*",
 		"https://cstraders.com.br/*"
 	],

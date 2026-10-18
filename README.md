@@ -13,7 +13,7 @@ Você não precisa mais cadastrar cada trade à mão.
 3. As trades novas aparecem na sua loja no cstraders.
 
 A extensão não tem tela própria. Você acompanha tudo no cstraders, em
-**Configurações → Sincronização das Trades**.
+**Configurações → Contas Steam**.
 
 ## O que ela não faz
 
@@ -33,6 +33,7 @@ Ao instalar, o navegador mostra o que a extensão pode acessar:
 | ------------------------------ | ------------------------------------------------- |
 | Acesso ao site da Steam        | Para saber que você está logado e em qual conta.  |
 | Acesso a api.steampowered.com  | Para ler o histórico de trades da conta.          |
+| Acesso a login.steampowered.com | Para a Steam renovar sua sessão quando ela vence. A extensão não faz login nem vê sua senha. |
 | Acesso ao site do cstraders    | Para enviar as trades para a sua loja.            |
 
 ## Seus dados
@@ -47,10 +48,10 @@ Mais detalhes na nossa [Política de Privacidade](https://cstraders.com.br/priva
 
 ## Como instalar
 
-1. No cstraders, abra **Configurações → Sincronização das Trades**.
-2. Abra **O que é a extensão e como instalar**, clique para instalar e confirme no
-   navegador.
-3. Volte ao cstraders e clique em **Atualizar trades** na sua conta Steam.
+1. Abra a [página da extensão na Chrome Web Store](https://chromewebstore.google.com/detail/lkkgojnfnkgfeggpebnecfhebjflofkh) e clique em
+   **Usar no Chrome**. No Edge, aceite *Permitir extensões de outras lojas*.
+2. Volte ao cstraders (recarregue a página se ela já estava aberta).
+3. Em **Configurações → Contas Steam**, clique em **Atualizar trades** na sua conta.
 
 ## Segurança
 
